@@ -1,18 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { AppComponent } from '../app.component';
+import { Room } from './rooms';
 
 @Component({
   selector: 'app-rooms',
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.css']
 })
-export class RoomsComponent {
+export class RoomsComponent implements OnInit{
   numberofRooms: number = 120;
-  availableRooms: number = 105;
-  bookedRooms: number = 15;
+  /*availableRooms: number = 105;
+  bookedRooms: number = 15;*/
 
   hideRooms : boolean = false;
+
+  rooms?: Room =  { 
+    totalRooms: 15,
+    availableRooms: 10,
+    bookedRooms:5
+  }
+      /*roomid:23,
+      roomType:" Deluxe",
+      amenities: " Hot bath, concierge, room service",
+      checkindate: new Date("2023-06-08"),
+      checkoutdate: new Date("2023-06-12"),
+      price: 500*/
 
   app = new AppComponent();
 

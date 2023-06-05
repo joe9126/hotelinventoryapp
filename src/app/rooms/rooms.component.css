@@ -13,4 +13,5 @@ button{
 button:hover{
     cursor:pointer;
     background: rgba(167, 39, 167, 0.467);
+   animation: grow;
 }
