@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Hotel inventory';
   hotelname = 'Hilton Hotel';
+
+  role : string = "Admin";
 }

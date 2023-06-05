@@ -15,3 +15,21 @@ button:hover{
     background: rgba(167, 39, 167, 0.467);
    animation: grow;
 }
+
+table, tr>td{
+    border: 1px solid #6367;
+}
+table tbody tr:hover{
+    cursor: pointer;
+    background: grey;
+    color: yellowgreen;
+}
+
+.even{
+    background:rgba(167, 39, 167, 0.467);
+    color: antiquewhite;
+}
+.odd{
+    background:rgba(42, 72, 245, 0.533);
+    color: white;
+}

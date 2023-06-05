@@ -330,4 +330,16 @@
 
   <h2>{{hotelname}}</h2>
   <app-rooms></app-rooms>
-</div>
+
+ <!----> <div [ngSwitch]="role">
+    <div *ngSwitchCase="'User'">
+    <p> Welcome User</p>
+    </div>
+    <div *ngSwitchCase="'Admin'">
+     
+    </div>
+    <div *ngSwitchDefault>
+      <p>You are not authorised to view this page</p>
+    </div>
+  </div>
+</div>-->

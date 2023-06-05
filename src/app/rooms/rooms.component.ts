@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AppComponent } from '../app.component';
-import { Room } from './rooms';
+import { Room, RoomsList } from './rooms';
 
 @Component({
   selector: 'app-rooms',
@@ -15,17 +15,39 @@ export class RoomsComponent implements OnInit{
 
   hideRooms : boolean = false;
 
-  rooms?: Room =  { 
+  rooms: Room =  { 
     totalRooms: 15,
     availableRooms: 10,
     bookedRooms:5
   }
-      /*roomid:23,
+
+  roomsList : RoomsList[] = [
+    {
+      roomid:23,
       roomType:" Deluxe",
       amenities: " Hot bath, concierge, room service",
       checkindate: new Date("2023-06-08"),
       checkoutdate: new Date("2023-06-12"),
-      price: 500*/
+      price: 500
+    },
+    {
+      roomid:24,
+      roomType:" Deluxe VIP",
+      amenities: " Hot bath, concierge, room service",
+      checkindate: new Date("2023-06-08"),
+      checkoutdate: new Date("2023-06-12"),
+      price: 1000
+    },
+    {
+      roomid:25,
+      roomType:" Presidential",
+      amenities: " Hot bath, concierge, room service",
+      checkindate: new Date("2023-06-08"),
+      checkoutdate: new Date("2023-06-12"),
+      price: 1500
+    }
+  ]
+      
 
   app = new AppComponent();
 
