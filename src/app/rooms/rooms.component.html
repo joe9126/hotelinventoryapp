@@ -11,27 +11,6 @@
 <p>Available Rooms: {{ rooms.availableRooms ?? 'No Vacant Rooms'}} </p>
 
 <div *ngIf="rooms.availableRooms > 0">
-   <table >
-    <thead>
-        <th>No</th>
-        <th>Even/odd</th>
-        <th>Room id</th>
-        <th>Room Tyoe</th>
-        <th>Amenities</th>
-        <th>Price</th>
-        <th>Checkin</th>
-    </thead>
-    <tbody>
-        <tr [ngClass]="e? 'even' : 'odd'" *ngFor="let room of roomsList ; let i = index; let e = even; let o=odd;">
-            <td>{{i+1}}</td>
-            <td>{{e? "Even" : "Odd"}}</td>
-            <td>{{room.roomid}}</td>
-            <td>{{room.roomType}}</td>
-            <td>{{room.amenities}}</td>
-            <td>{{room.price}}</td>
-            <td>{{room.checkindate}}</td>
-        </tr>
-    </tbody>
-   </table>
+   <app-rooms-list [rooms] ="roomsList"></app-rooms-list>
 </div>
 

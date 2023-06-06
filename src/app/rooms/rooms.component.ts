@@ -21,32 +21,7 @@ export class RoomsComponent implements OnInit{
     bookedRooms:5
   }
 
-  roomsList : RoomsList[] = [
-    {
-      roomid:23,
-      roomType:" Deluxe",
-      amenities: " Hot bath, concierge, room service",
-      checkindate: new Date("2023-06-08"),
-      checkoutdate: new Date("2023-06-12"),
-      price: 500
-    },
-    {
-      roomid:24,
-      roomType:" Deluxe VIP",
-      amenities: " Hot bath, concierge, room service",
-      checkindate: new Date("2023-06-08"),
-      checkoutdate: new Date("2023-06-12"),
-      price: 1000
-    },
-    {
-      roomid:25,
-      roomType:" Presidential",
-      amenities: " Hot bath, concierge, room service",
-      checkindate: new Date("2023-06-08"),
-      checkoutdate: new Date("2023-06-12"),
-      price: 1500
-    }
-  ]
+  roomsList : RoomsList[] = [ ];
       
 
   app = new AppComponent();
@@ -55,7 +30,37 @@ export class RoomsComponent implements OnInit{
 
   constructor(){}
 
-  ngOnInit(): void{}
+  ngOnInit(): void{
+   this.roomsList = [
+    {
+      roomid:23,
+      roomType:" Deluxe",
+      amenities: " Hot bath, concierge, room service",
+      checkindate: new Date("2023-06-08"),
+      checkoutdate: new Date("2023-06-12"),
+      price: 500,
+      rating: 4.3
+    },
+    {
+      roomid:24,
+      roomType:" Deluxe VIP",
+      amenities: " Hot bath, concierge, room service",
+      checkindate: new Date("2023-06-08"),
+      checkoutdate: new Date("2023-06-12"),
+      price: 1000,
+      rating: 3.2
+    },
+    {
+      roomid:25,
+      roomType:" Presidential",
+      amenities: " Hot bath, concierge, room service",
+      checkindate: new Date("2023-06-08"),
+      checkoutdate: new Date("2023-06-12"),
+      price: 1500,
+      rating:6.5
+    }
+   ];
+  }
 
   toggle(){
     this.hideRooms = !this.hideRooms;
