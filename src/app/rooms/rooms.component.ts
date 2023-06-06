@@ -22,7 +22,8 @@ export class RoomsComponent implements OnInit{
   }
 
   roomsList : RoomsList[] = [ ];
-      
+    
+  selectedRoom! : RoomsList;
 
   app = new AppComponent();
 
@@ -64,5 +65,10 @@ export class RoomsComponent implements OnInit{
 
   toggle(){
     this.hideRooms = !this.hideRooms;
+  }
+
+  selectRoom(room : RoomsList){
+    this.selectedRoom = room;
+    //console.log(room);
   }
 }

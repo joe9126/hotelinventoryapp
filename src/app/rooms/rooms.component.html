@@ -8,9 +8,12 @@
     <button (click)="toggle()">Toggle</button>
 </div>
 
-<p>Available Rooms: {{ rooms.availableRooms ?? 'No Vacant Rooms'}} </p>
+<p>Available Rooms: {{ rooms?.availableRooms ?? 'No Vacant Rooms'}} </p>
 
+<div *ngIf="selectedRoom!">
+    {{ selectedRoom | json}}
+</div>l
 <div *ngIf="rooms.availableRooms > 0">
-   <app-rooms-list [rooms] ="roomsList"></app-rooms-list>
+   <app-rooms-list [rooms] ="roomsList" (selectedRoom)="selectRoom($event)"></app-rooms-list>
 </div>
 

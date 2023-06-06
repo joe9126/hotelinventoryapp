@@ -12,6 +12,7 @@
         <th>Price</th>
         <th>Checkin</th>
         <th>Rating</th>
+        <th>Select Room</th>
      </tr>
     </thead>
     <tbody>
@@ -24,6 +25,9 @@
             <td>{{room.price | currency : 'INR'}}</td>
             <td>{{room.checkindate | date : "dd MMM, yyyy"}}</td>
             <td>{{room.rating | number : '1.0-0'}}</td>
+            <td>
+                <button class="btn btn-primary btn-small" (click)="selectRoom(room)">Select</button>
+            </td>
         </tr>
     </tbody>
    </table>
